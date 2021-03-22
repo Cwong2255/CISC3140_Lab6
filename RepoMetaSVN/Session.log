@@ -1,0 +1,120 @@
+calvinwong@Calvins-MacBook-Pro ~ % cd Desktop 
+calvinwong@Calvins-MacBook-Pro Desktop % mkdir Lab6SVN
+calvinwong@Calvins-MacBook-Pro Desktop % cd Lab6SVN 
+calvinwong@Calvins-MacBook-Pro Lab6SVN % svn co --depth empty https://github.com/Cwong2255/CISC3140_Lab6
+Checked out revision 3.
+calvinwong@Calvins-MacBook-Pro Lab6SVN % cd CISC3140_Lab6 
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % ls
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % svn up trunk
+Updating 'trunk':
+A    trunk
+A    trunk/RepoMetaGit
+A    trunk/RepoMetaGit/HelloWorld.class
+A    trunk/RepoMetaGit/HelloWorld.java
+A    trunk/RepoMetaGit/README.md
+A    trunk/RepoMetaGit/Session.log
+Updated to revision 3.
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % cd 
+calvinwong@Calvins-MacBook-Pro ~ % cd -       
+~/Desktop/Lab6SVN/CISC3140_Lab6
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % ls
+trunk
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % cd trunk 
+calvinwong@Calvins-MacBook-Pro trunk % ls
+RepoMetaGit
+calvinwong@Calvins-MacBook-Pro trunk % rm -rf RepoMetaGit 
+calvinwong@Calvins-MacBook-Pro trunk % ls
+calvinwong@Calvins-MacBook-Pro trunk % cd -
+~/Desktop/Lab6SVN/CISC3140_Lab6
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % ls
+trunk
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % cd trunk 
+calvinwong@Calvins-MacBook-Pro trunk % ls
+calvinwong@Calvins-MacBook-Pro trunk % mkdir RepoMetaSVN
+calvinwong@Calvins-MacBook-Pro trunk % ls
+RepoMetaSVN
+calvinwong@Calvins-MacBook-Pro trunk % cd RepoMetaSVN 
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % vim README.md
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % vim HelloWorld.java
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % javac HelloWorld.java 
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % java HelloWorld 
+Hello World
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % cd -
+~/Desktop/Lab6SVN/CISC3140_Lab6/trunk
+calvinwong@Calvins-MacBook-Pro trunk % ls
+RepoMetaSVN
+calvinwong@Calvins-MacBook-Pro trunk % svn add .
+svn: warning: W150002: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/trunk' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro trunk % cd  
+calvinwong@Calvins-MacBook-Pro ~ % cd Desktop 
+calvinwong@Calvins-MacBook-Pro Desktop % cd Lab6SVN 
+calvinwong@Calvins-MacBook-Pro Lab6SVN % ls
+CISC3140_Lab6
+calvinwong@Calvins-MacBook-Pro Lab6SVN % cd CISC3140_Lab6 
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % svn add RepoMetaSVN
+svn: warning: W155010: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/RepoMetaSVN' not found
+svn: E200009: Could not add all targets because some targets don't exist
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % ls    
+trunk
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % ls -a
+.	..	.svn	trunk
+calvinwong@Calvins-MacBook-Pro CISC3140_Lab6 % cd trunk 
+calvinwong@Calvins-MacBook-Pro trunk % ls
+RepoMetaSVN
+calvinwong@Calvins-MacBook-Pro trunk % svn add RepoMetaSVN
+A         RepoMetaSVN
+A         RepoMetaSVN/HelloWorld.java
+A         RepoMetaSVN/README.md
+A  (bin)  RepoMetaSVN/HelloWorld.class
+calvinwong@Calvins-MacBook-Pro trunk % ls
+RepoMetaSVN
+calvinwong@Calvins-MacBook-Pro trunk % cd RepoMetaSVN 
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn add .
+svn: warning: W150002: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/trunk/RepoMetaSVN' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % ls
+HelloWorld.class	HelloWorld.java		README.md
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn add HelloWorld.java 
+svn: warning: W150002: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/trunk/RepoMetaSVN/HelloWorld.java' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn add HelloWorld.class
+svn: warning: W150002: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/trunk/RepoMetaSVN/HelloWorld.class' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn add README.md 
+svn: warning: W150002: '/Users/calvinwong/Desktop/Lab6SVN/CISC3140_Lab6/trunk/RepoMetaSVN/README.md' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn update
+Updating '.':
+At revision 3.
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn commit -m "First Commit"
+Adding         .
+Adding  (bin)  HelloWorld.class
+Adding         HelloWorld.java
+Adding         README.md
+Transmitting file data ...done
+Committing transaction...
+Committed revision 4.
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % ls 
+HelloWorld.class	HelloWorld.java		README.md
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % vim HelloWorld.java 
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % javac HelloWorld.java
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % java HelloWorld 
+Hello World
+March 22nd, 2021
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn update
+Updating '.':
+At revision 4.
+calvinwong@Calvins-MacBook-Pro RepoMetaSVN % svn commit -m "Update Date Printed SVN Version"
+Sending        HelloWorld.class
+Sending        HelloWorld.java
+Transmitting file data ..done
+Committing transaction...
+Committed revision 5.
+

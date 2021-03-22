@@ -1,0 +1,96 @@
+calvinwong@Calvins-MacBook-Pro ~ % cd Desktop 
+calvinwong@Calvins-MacBook-Pro Desktop % mkdir Lab6Git     
+calvinwong@Calvins-MacBook-Pro Desktop % cd Lab6Git 
+calvinwong@Calvins-MacBook-Pro Lab6Git % git init
+Initialized empty Git repository in /Users/calvinwong/Desktop/Lab6Git/.git/
+calvinwong@Calvins-MacBook-Pro Lab6Git % ls
+calvinwong@Calvins-MacBook-Pro Lab6Git % mkdir RepoMetaGit
+calvinwong@Calvins-MacBook-Pro Lab6Git % ls
+RepoMetaGit
+calvinwong@Calvins-MacBook-Pro Lab6Git % cd RepoMetaGit 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % vim README.md
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % vim HelloWorld.java
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % javac HelloWorld.java && java HelloWorld      
+HelloWorld.java:1: error: class, interface, or enum expected
+public static HelloWorld{
+              ^
+HelloWorld.java:2: error: class, interface, or enum expected
+	public static void main(String [] args){
+	              ^
+HelloWorld.java:4: error: class, interface, or enum expected
+	}
+	^
+3 errors
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % vim HelloWorld.java 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % javac HelloWorld.java && java HelloWorld      
+
+Hello World
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % cd -
+~/Desktop/Lab6Git
+calvinwong@Calvins-MacBook-Pro Lab6Git % ls
+RepoMetaGit
+calvinwong@Calvins-MacBook-Pro Lab6Git % git add .
+calvinwong@Calvins-MacBook-Pro Lab6Git % cd RepoMetaGit 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git add .
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % cd -
+~/Desktop/Lab6Git
+calvinwong@Calvins-MacBook-Pro Lab6Git % ls
+RepoMetaGit
+calvinwong@Calvins-MacBook-Pro Lab6Git % ls -a
+.		..		.git		RepoMetaGit
+calvinwong@Calvins-MacBook-Pro Lab6Git % git commit -m "First Commit" 
+[master (root-commit) e4d00dc] First Commit
+ 3 files changed, 9 insertions(+)
+ create mode 100644 RepoMetaGit/HelloWorld.class
+ create mode 100644 RepoMetaGit/HelloWorld.java
+ create mode 100644 RepoMetaGit/README.md
+calvinwong@Calvins-MacBook-Pro Lab6Git % git add RepoMetaGit 
+calvinwong@Calvins-MacBook-Pro Lab6Git % git branch -M main
+calvinwong@Calvins-MacBook-Pro Lab6Git % git remote add origin git@github.com:Cwong2255/CISC3140_Lab6.git
+calvinwong@Calvins-MacBook-Pro Lab6Git % git push -u origin main
+Warning: Permanently added the RSA host key for IP address to the list of known hosts.
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 792 bytes | 792.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To github.com:Cwong2255/CISC3140_Lab6.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+calvinwong@Calvins-MacBook-Pro Lab6Git % cd RepoMetaGit 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % vim HelloWorld.java 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % javac HelloWorld.java  
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % java HelloWorld 
+Hello World
+March 22nd, 2021
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git commit -m "Update Date Printed"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+	modified:   HelloWorld.class
+	modified:   HelloWorld.java
+
+no changes added to commit
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git add HelloWorld.java 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git add HelloWorld.class 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git commit -m "Update Date Printed"
+[main af479dd] Update Date Printed
+ 2 files changed, 1 insertion(+)
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 622 bytes | 622.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Cwong2255/CISC3140_Lab6.git
+   e4d00dc..af479dd  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % ls
+HelloWorld.class	HelloWorld.java		README.md
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % vim Session.log 
+calvinwong@Calvins-MacBook-Pro RepoMetaGit % ls
+HelloWorld.class	HelloWorld.java		README.md
